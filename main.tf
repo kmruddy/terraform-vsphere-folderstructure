@@ -36,6 +36,7 @@ resource "vsphere_folder" "filesvr_smb" {
   path          = "${vsphere_folder.file_svr.path}/SMB"
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.dc.id
+}
 
 resource "vsphere_folder" "mgmt" {
   path          = "${vsphere_folder.parent.path}/Management"
