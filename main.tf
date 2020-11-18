@@ -27,13 +27,13 @@ resource "vsphere_folder" "file_svr" {
 }
 
 resource "vsphere_folder" "filesvr_nfs" {
-  path          = "${vsphere_folder.file_svr.path}/Linux"
+  path          = "${vsphere_folder.file_svr.path}/NFS"
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 resource "vsphere_folder" "filesvr_smb" {
-  path          = "${vsphere_folder.file_svr.path}/VMware"
+  path          = "${vsphere_folder.file_svr.path}/SMB"
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.dc.id
 
